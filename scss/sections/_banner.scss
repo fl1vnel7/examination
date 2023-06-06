@@ -1,0 +1,41 @@
+.banner {
+    width: 100%;
+    margin-bottom: 80px;
+    &__image { 
+        @include flex(flex-end, flex-start);
+        img {
+            position: relative;
+            width: 100%;
+        }
+    }
+    &__text {
+        margin-left: 80px;
+        margin-bottom: 84px;
+        position: absolute;
+        &-title {
+            width: 60%;
+            font-size: 64px;
+            line-height: 80px;
+            color: $white;
+            margin-bottom: 30px;
+        }
+        &-text {
+            width: 40%;
+            font-size: 25px;
+            line-height: 30px;
+            color: $white;
+            margin-right: 25px;
+            display: flex;
+            @include flex(center, unset);
+        }
+        &-arrow {
+            display: flex;
+            img {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                border: 1px solid $white;
+            }
+        }
+    }
+}

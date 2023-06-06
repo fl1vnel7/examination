@@ -1,0 +1,62 @@
+.header {
+  position: relative;
+  width: 100%;
+  margin-bottom: 180px;
+  &__row {
+    @include flex(center, space-between);
+  }
+  &__logo {
+    img {
+      width: 110px;
+      height: 79px;
+    }
+  }
+  &__navbar {
+    display: flex;
+    .header__link {
+      font-size: 16px;
+      line-height: 19px;
+      color: $header-link;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: $link-hover;
+      }
+      &:not(:last-child) {
+        margin-right: 48px;
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    .header {
+        &__button-first {
+            background-color: $button_color;
+            @include flex(center, center);
+            padding: 18px 36px;
+            margin-right: 12px;
+            gap: 10px;
+            border-radius: 8px;
+            border: 1px solid $button_color;
+            font-family: $main-font;
+            color: $white;
+        }
+        &__button-title {
+            font-size: 16px;
+            line-height: 19px;
+        }
+        &__button-second {
+            width: 83px;
+            height: 55px;
+            background-color: $white;
+            @include flex(center, space-evenly);
+            border: 1px solid $border-color;
+            border-radius: 8px;
+            color: $border-color;
+            &__button-text {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.programmes {
+    display: flex;
+    flex-direction: column;
+    .programme {
+        &__title {
+            width: 100%;
+            @include flex(center, space-between);
+            font-size: 39px;
+            line-height: 47px;
+            color: $black;
+            .title__orange {
+                color: $button-color;
+            }
+            &-button {
+                border: 1px solid #555351;
+                border-radius: 8px;
+                padding: 18px 36px;
+                background-color: $white;
+            }
+        }
+        &__card {
+            display: flex;
+            flex-wrap: wrap;
+            .card {
+                width: 337px;
+                height: 260px;
+            }
+        }
+    }
+}
